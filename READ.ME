@@ -1,0 +1,59 @@
+# KPI Reminder Script
+
+This project contains a Google Apps Script that automatically sends KPI reminder emails to employees based on data stored in a Google Sheet.
+
+## 📌 What It Does
+
+- Reads employee data from the first sheet of a Google Spreadsheet
+- Sends a daily KPI reminder email to each employee
+- Includes:
+  - Employee name
+  - KPI task link
+  - Due date
+- Skips rows without an email address
+
+## 📄 Spreadsheet Structure
+
+The script expects the following columns in **Row 1 (header row)**:
+
+| Column | Description |
+|------|-------------|
+| A | Employee Name |
+| B | Employee Email |
+| C | KPI Task Link |
+| D | Due Date |
+| E | Manager Email (currently not used) |
+
+Data should start from **Row 2**.
+
+## 🧠 Script Logic
+
+- Uses `SpreadsheetApp` to read data
+- Uses `MailApp.sendEmail()` to send reminders
+- Always reads from the **first sheet** in the spreadsheet
+
+## 🚀 How to Use
+
+1. Open Google Sheets
+2. Go to **Extensions → Apps Script**
+3. Paste the code into `Code.gs`
+4. Save the project
+5. Run `sendKpiReminders()` once to authorize
+6. (Optional) Set a **time-driven trigger** to run daily
+
+## ⏰ Optional: Daily Trigger
+
+- In Apps Script:
+  - Go to **Triggers**
+  - Add a **Time-driven trigger**
+  - Run once per day (e.g., every morning)
+
+## 🔐 Permissions
+
+The script requires permission to:
+- Read Google Sheets
+- Send emails on your behalf
+
+## 📜 License
+
+MIT License

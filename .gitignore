@@ -1,18 +1,14 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Node
+node_modules/
+npm-debug.log*
 
-# Other files and folders
-.settings/
+# Google Apps Script / clasp
+.clasp.json
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# OS
+.DS_Store
+Thumbs.db
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Editor
+.vscode/
+.idea/
